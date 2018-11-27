@@ -3,6 +3,7 @@ const router = express.Router();
 const userService = require('../service/user.service');
 
 // routes
+router.use('/', require('./employees.controller'));
 router.post('/authenticate', authenticate);
 router.post('/register', register);
 router.get('/', getAll);
